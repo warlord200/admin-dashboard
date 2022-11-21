@@ -1,0 +1,46 @@
+* {
+  border: 1px solid red;
+  margin: 0;
+}
+
+:root {
+  --sidebar-color: #7f669d;
+  --header-color: #ba94d1;
+  --project-color: #debace;
+}
+body {
+  display: grid;
+  grid-template-columns: 30vw auto;
+  height: 100vh;
+  width: 100vw;
+  grid-auto-flow: row;
+}
+.sidebar {
+  display: grid;
+  grid-template-rows: 10vh auto;
+  gap: 20px;
+  background-color: var(--sidebar-color);
+}
+
+.homebar-wrapper,
+.settings-wrapper {
+  display: grid;
+  gap: 10px;
+  align-self: center;
+}
+
+.homebar-wrapper img,
+.settings-wrapper img,
+.homebar-wrapper svg {
+  width: 5vw;
+  height: 5vh;
+  margin-left: 10px;
+}
+
+.homebar-wrapper div,
+.dashboard,
+.settings-wrapper div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
