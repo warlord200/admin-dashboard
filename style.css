@@ -4,15 +4,17 @@
   font-family: "Raleway", sans-serif;
 }
 :root {
-  --sidebar-color: #7f669d;
-  --header-color: #ba94d1;
-  --project-color: #debace;
+  --sidebar-color: #581c87;
+  --header-color: #d8b4fe;
+  --project-color: #e9d5ff;
+  --font-color: #f3e8ff;
+  --path-color: #f3e8ff;
   --gradient-1: #7b4397;
   --gradient-2: #dc2430;
 }
 
 path {
-  fill: #fbfacd;
+  fill: var(--path-color);
 }
 body {
   display: grid;
@@ -26,12 +28,16 @@ body {
   grid-template-rows: 10vh auto;
   gap: 20px;
   background-color: var(--sidebar-color);
-  color: #fbfacd;
+  color: var(--font-color);
 }
 
 .dashboard svg {
   width: 10vw;
   height: 10vh;
+}
+
+.dashboard div {
+  font-size: 30px;
 }
 
 .homebar-wrapper,
@@ -62,7 +68,7 @@ body {
   grid-template-rows: 1fr 4fr;
   gap: 20px;
   background-color: var(--project-color);
-  color: #fbfacd;
+  color: #581c87;
 }
 
 .search-header {
@@ -88,6 +94,8 @@ body {
 
 .search-header input {
   flex: 1;
+  border: none;
+  border-radius: 5px;
 }
 
 #profile-picture {
@@ -118,12 +126,21 @@ body {
 
 .name {
   flex: 1;
+  font-size: 35px;
 }
 
 .button {
   width: 100px;
   height: 40px;
   border-radius: 10px;
+  background-color: var(--sidebar-color);
+  color: var(--font-color);
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--font-color);
+  color: var(--sidebar-color);
 }
 
 /* project section */
@@ -159,7 +176,7 @@ body {
   );
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20% auto;
+  grid-template-rows: 1fr 5fr;
 }
 
 .card-header {
@@ -168,6 +185,7 @@ body {
   padding-left: 30px;
   align-items: center;
   display: flex;
+  color: var(--font-color);
 }
 
 .cards a {
